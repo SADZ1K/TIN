@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1000px;
+    background-image: url(tlo.png);
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+/* Ograniczenie szerokości strony */
+.container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Styl lewej kolumny */
+#left {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 200px;
+    height: 600px;
+    float: left;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#left a {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+#left a:hover {
+    opacity: 0.7;
+}
+
+#left ul {
+    list-style: none;
+}
+
+#left ul ul {
+    margin-left: -20px;
+}
+
+/* Styl dla głównych linków nawigacyjnych */
+#left ul li > a {
+    background-color: #3498db;
+}
+
+/* Styl dla podkategorii */
+#left ul ul li > a {
+    background-color: #e74c3c;
+}
+
+/* Scrollowanie prawej kolumny */
+#right {
+    overflow-y: auto;
+    height: 600px;
+    width: calc(100% - 240px); /* Dostosowujemy szerokość na podstawie lewej kolumny i marginesu */
+	background-color: #FFCC99
+}
+#imie, #opis {
+    display: inline-block;
+    width: 45%;
+	margin-right: 5%;
+}
+#wiek, #plec, #opcja {
+    display: inline-block;
+    width: 40%;
+	margin-right: 5%;
+}
+
+/* Styl tabelki */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+	background-color:#FF6666;
+}
+th, td {
+    padding: 10px;
+}
+tr{
+	background-color:#FF99CC;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#stopka {
+	text-align: center;
+    background-color: #CC6633;
+    clear: both;
+    width: 960px;
+	height:140px;
+}
